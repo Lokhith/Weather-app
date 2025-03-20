@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+
 function App() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
@@ -43,7 +44,14 @@ function App() {
   return (
     <div className="app-container">
       <div className="left-panel">
-        <h1>Weather App</h1>
+        <div className="app-heading">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
+            alt="Weather Icon"
+            className="heading-icon"
+          />
+          <h1>Weather App</h1>
+        </div>
         <div className="search">
           <input
             type="text"
@@ -64,7 +72,7 @@ function App() {
         ) : weather ? (
           <div className="weather-box">
             <img
-              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+              src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
               alt="weather-icon"
             />
             <h2>{weather.name}</h2>
